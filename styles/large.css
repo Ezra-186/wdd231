@@ -1,0 +1,57 @@
+@media (min-width: 600px) {
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation li+li {
+        margin-top: 0;
+    }
+
+    .navigation li {
+        flex: 1;
+        list-style: none;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 1rem 0;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .intro {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .about,
+    .photo {
+        flex: 1;
+    }
+
+    .courses {
+        margin-top: 2rem;
+    }
+
+    .course-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .course-card {
+        flex: 1 1 calc(33% - 1rem);
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Course home page for Web & Computer Programming certificate">
+    <meta name="author" content="Ezra D. Rivera">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Home Page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" class="logo">
+        <span class="author-name">Ezra D. Rivera</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="x">Chamber Project</a></li>
+            <li><a href="x">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        <div class="intro">
+            <section class="about">
+                <h2>About Me</h2>
+                <p>
+                    I was raised in Los Angeles but now live in Orange County near Disneyland. I am an Engineer
+                    passionate about building
+                    software and exploring new technologies. As a single dad to my daughter, I enjoy hiking along the
+                    coast, visiting theme
+                    parks, and experimenting with simple home automation projects.
+                </p>
+            </section>
+            <section class="photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.jpg" alt="Student Photo">
+            </section>
+        </div>
+
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="buttons">
+                <button id="all" class="active">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+            <div id="course-list" class="course-list"></div>
+            <p class="credit-summary">
+                The total credits for courses listed above is <span id="credits"></span>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/ezradaniel/"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/Ezra-186/wdd231"><img src="images/github.svg" alt="GitHub"></a>
+        </div>
+        <p>© <span id="currentyear"></span> Ezra D. Rivera 🏖️ • Orange County, CA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
