@@ -20,6 +20,10 @@ header {
     align-items: center;
 }
 
+main h1 {
+    text-align: center;
+}
+
 .logo {
     height: 40px;
 }
