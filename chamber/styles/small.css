@@ -1,0 +1,214 @@
+/* Base typography and layout for mobile */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* Header and nav */
+header {
+    background: #004080;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo-link {
+    display: inline-block;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.site-logo {
+    max-height: 50px;
+    width: auto;
+}
+
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 1.5rem; }
+
+
+/* View‐toggle buttons */
+.view-toggle {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.view-toggle button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+/* Member cards container defaults to list for mobile */
+
+#members {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+#members.list,
+#members {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+/* switch to grid*/
+#members.grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+#members section {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ccc;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+#members section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+    
+/* hamburger icon */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .hamburger::before {
+    content: "\2630";  /* ☰ */
+    color: white;
+  }
+  .hamburger.show::before {
+    content: "\00D7";  /* × */
+    color: white;
+  }
+  
+  /* hide nav by default */
+  .navigation {
+    display: none;
+    background: #333;
+  }
+  .navigation.show {
+    display: block;
+  }
+  
+  /* nav links */
+  .navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  .navigation li+li {
+    margin-top: 0.5rem;
+  }
+  .navigation a {
+    display: block;
+    padding: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  .navigation li.current a {
+    background: #555;
+    color: #fff;
+    padding: 1em;
+    border-radius: 4px;
+  }
+  .navigation a:hover {
+    background: #444;
+    padding: 1em;
+  }
+
+/*------------------
+  LIST VIEW STYLING
+-------------------*/
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "name address phone"
+        "link .       .";
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#members.list section img {
+    display: none;
+}
+
+#members.list section h3 {
+    grid-area: name;
+    margin: 0;
+}
+
+#members.list section p:nth-of-type(1) {
+    grid-area: address;
+    margin: 0;
+}
+
+#members.list section p:nth-of-type(2) {
+    grid-area: phone;
+    margin: 0;
+}
+
+#members.list section p:nth-of-type(3) {
+    grid-area: link;
+    margin: 0.5rem 0 0;
+}
+
+#members.list section:nth-child(even) {
+    background: #f4f4f4;
+}
+
+.visit-link {
+    display: inline-block;
+    background-color: #004080; 
+    color: #ffffff; 
+    text-decoration: none; 
+    padding: 0.5rem 1rem; 
+    border-radius: 0.25rem; 
+    font-weight: bold; 
+    transition: background-color 0.2s ease;
+  }
+  
+  .visit-link:hover,
+  .visit-link:focus {
+    background-color: #002c5c;
+  }
+
+  
+/* Footer */
+footer {
+    background: #f2f2f2;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+.social-icons img {
+    width: 2rem;
+    height: auto; 
+}

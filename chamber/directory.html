@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Directory | Anaheim</title>
+    <meta name="description" content="Directory of members for the Anaheim Chamber of Commerce">
+    <meta name="author" content="Ezra D. Rivera">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chamber Directory – Anaheim">
+    <meta property="og:description" content="Find local businesses and organizations in Anaheim.">
+    <meta property="og:image" content="https://your-domain.com/chamber/images/og-image.png">
+    <meta property="og:url" content="https://ezra-186.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- CSS normalize -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    </head>
+
+<body>
+    <!-- Header + Navigation -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/Logo_Anahiem.png" alt="Anaheim Chamber of Commerce logo" class="site-logo"></a>
+        <h1>Anaheim Chamber Directory</h1>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle menu"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li class="current"><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content: Grid/List controls + container -->
+    <main>
+        <section class="view-toggle">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </section>
+        <article id="members" class="grid">
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com/"><img src="images/facebook.svg" alt="Facebook" width="32" height="32"  loading="lazy"  ></a>
+            <a href="https://twitter.com/"><img src="images/x.svg" alt="Twitter" width="32" height="32"  loading="lazy"  ></a>
+        </div>
+        <p>Contact: Ezra D. Rivera | WDD 231</p>
+        <p>&copy; <span id="year"></span> Anaheim Chamber of Commerce</p>
+        <p>Last modified:
+            <time id="lastModified"></time>      
+        </p>
+    </footer>
+
+    <!-- JS -->
+    <script src="scripts/main.js" defer></script>
+</body>
+
+</html>

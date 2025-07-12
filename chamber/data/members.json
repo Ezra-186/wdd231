@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Acme Electric",
+        "address": "123 Main St, Yorba Linda, CA",
+        "phone": "555-123-4567",
+        "website": "https://acmeelectric.example.com",
+        "image": "acme-electric.webp",
+        "level": "gold"
+    },
+    {
+        "name": "Baker’s Books",
+        "address": "456 Elm St, Oragne, CA",
+        "phone": "555-234-5678",
+        "website": "https://bakersbooks.example.com",
+        "image": "bakers-books.webp",
+        "level": "silver"
+    },
+    {
+        "name": "Coastal Cafe",
+        "address": "789 Ocean Ave, Anaheim, CA",
+        "phone": "555-345-6789",
+        "website": "https://coastalcafe.example.com",
+        "image": "coastal-cafe.webp",
+        "level": "bronze"
+    },
+    {
+        "name": "Green Thumb Nursery",
+        "address": "321 Garden Rd, Fullerton, CA",
+        "phone": "555-456-7890",
+        "website": "https://greenthumbnursery.example.com",
+        "image": "green-thumb.webp",
+        "level": "gold"
+    },
+    {
+        "name": "Horizon Law Firm",
+        "address": "654 Justice Blvd, Anaheim, CA",
+        "phone": "555-567-8901",
+        "website": "https://horizonlaw.example.com",
+        "image": "horizon-law.webp",
+        "level": "platinum"
+    },
+    {
+        "name": "Stellar Fitness",
+        "address": "987 Workout Way, Fullerton, CA",
+        "phone": "555-678-9012",
+        "website": "https://stellarfitness.example.com",
+        "image": "stellar-fitness.webp",
+        "level": "silver"
+    },
+    {
+        "name": "Summit Travel Agency",
+        "address": "159 Explorer Ln, Anaheim, CA",
+        "phone": "555-789-0123",
+        "website": "https://summittravel.example.com",
+        "image": "summit-travel.webp",
+        "level": "bronze"
+    },
+    {
+        "name": "TechWave Solutions",
+        "address": "753 Innovation Dr, Yorba Linda, CA",
+        "phone": "555-890-1234",
+        "website": "https://techwavesolutions.example.com",
+        "image": "techwave-solutions.webp",
+        "level": "gold"
+    }
+]
