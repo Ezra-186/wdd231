@@ -62,5 +62,4 @@ window.addEventListener('DOMContentLoaded', () => {
     setFooterDates();
 });
 
-// footer dates
 
