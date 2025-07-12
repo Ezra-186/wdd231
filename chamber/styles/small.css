@@ -17,6 +17,7 @@ body {
 main {
     flex: 1;
     padding: 1rem;
+    min-height: calc(100vh - 10rem);
 }
 
 #members section img {
