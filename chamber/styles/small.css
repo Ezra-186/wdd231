@@ -98,10 +98,12 @@ header h1 {
   .hamburger::before {
     content: "\2630";  /* ☰ */
     color: white;
+    font-size: 1.9rem;
   }
   .hamburger.show::before {
     content: "\00D7";  /* × */
     color: white;
+    font-size: 1.9rem;
   }
   
   /* hide nav by default */
