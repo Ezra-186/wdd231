@@ -27,7 +27,7 @@ main {
 
 .social-icons img {
     width: 2rem;
-    height: 2rem; 
+    height: auto; 
     flex: 0 0 auto;
 }
 
