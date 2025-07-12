@@ -29,12 +29,7 @@ async function loadMembers() {
         data.forEach(m => {
             const card = document.createElement('section');
             card.innerHTML = `
-        <img
-          src="images/${m.image}"
-          alt="${m.name}"
-          width="240" height="240"
-          loading="lazy"
-        >
+        <img src="images/${m.image}" alt="${m.name}" width="240" height="240" loading="lazy">
         <h3>${m.name}</h3>
         <p>${m.address}</p>
         <p>${m.phone}</p>
