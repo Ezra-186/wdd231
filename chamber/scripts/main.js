@@ -66,7 +66,7 @@ function setFooterDates() {
 
         lmEl.textContent = friendly; 
     }
-  }
+}
 
 window.addEventListener('DOMContentLoaded', () => {
     loadMembers();
