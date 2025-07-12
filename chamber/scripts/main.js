@@ -48,9 +48,25 @@ async function loadMembers() {
 
 // footer dates
 function setFooterDates() {
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
-}
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    const pad = n => String(n).padStart(2, '0');
+
+    // last-modified
+    const lmEl = document.getElementById('lastModified');
+    if (lmEl) {
+        const d = new Date(document.lastModified);
+        const iso = d.toISOString();
+        lmEl.setAttribute('datetime', iso);
+
+        const friendly =
+            `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ` +
+            `${pad(d.getHours())}:${pad(d.getMinutes())}`;
+
+        lmEl.textContent = friendly; 
+    }
+  }
 
 window.addEventListener('DOMContentLoaded', () => {
     loadMembers();
