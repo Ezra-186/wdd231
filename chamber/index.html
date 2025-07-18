@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaheim Chamber Home</title>
+    <meta name="description" content="Welcome to the Anaheim Chamber of Commerce">
+    <meta name="author" content="Ezra D. Rivera">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anaheim Chamber Home">
+    <meta property="og:description" content="Key info and invitations to engage with the Chamber.">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="https://ezra-186.github.io/wdd231/chamber/index.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto" as="style">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- CSS normalize -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body class="home">
+    <!-- Header + Navigation -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo_anahiem_1.webp" alt="Anaheim Chamber of Commerce logo" class="site-logo">
+        </a>
+        <h2>Anaheim Chamber Home</h2>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle menu"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <!--HERO-->
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large_2.webp" media="(min-width:50rem)">
+                <img src="images/hero-small_2.webp" alt="City skyline of Anaheim" width="600" height="200" loading="lazy">
+            </picture>
+    
+            <a class="cta-btn" href="join.html">Keynote&nbsp;Tickets</a>
+        </section>
+        <h1>Home</h1>
+        <!--EVENTS-->
+        <section class="card events">
+            <h3>Events</h3>
+            <p>Community workshop – 10 Aug • Virtual</p>
+            <p>Quarterly luncheon – 24 Aug • City Hall</p>
+        </section>
+    
+        <!--WEATHER-->
+        <section class="card weather">
+            <h3>Current Weather</h3>
+          
+            <div id="weather-data">
+              <p>Loading…</p>
+            </div>
+          
+            <div class="stats"> 
+                <p>High:     <span id="high-temp">--</span></p>
+                <p>Low:      <span id="low-temp">--</span></p>
+                <p>Humidity: <span id="humidity">--</span></p>
+                <p>Sunrise:  <span id="sunrise">--</span></p>
+                <p>Sunset:   <span id="sunset">--</span></p>
+              </div>
+          </section>
+    
+        <section class="card forecast">
+            <h3>Weather Forecast</h3>
+            <ul id="forecast-list"></ul>
+        </section>
+    
+        <section class="spotlights" id="spotlights"></section>
+        </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-col footer-contact">
+                <h4>Anaheim Chamber of Commerce</h4>
+                <p>123 Main Street<br>Anaheim, CA 92805</p>
+                <p><a href="mailto:info@anaheimcc.org">info@anaheimcc.org</a><br>
+                    (714) 555-1234</p>
+            </div>
+    
+            <div class="footer-col footer-social">
+                <a href="https://facebook.com/" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook Logo"></a>
+                <a href="https://x.com/?lang=en" aria-label="Twitter"><img src="images/x.svg" alt="Twitter Logo"></a>
+                <a href="https://linkedin.com/company/" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn Logo"></a>
+            </div>
+    
+            <div class="footer-col footer-credits">
+                <p>WDD231 Class Project<br>
+                    Ezra Daniel Rivera<br>
+                    © 2025 Anaheim Chamber of Commerce<br>
+                    Last modified: <time id="lastModified" datetime="1970-01-01T00:00:00Z">Loading...</time>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script type="module" src="scripts/main.mjs"></script>
+</body>
+
+</html>

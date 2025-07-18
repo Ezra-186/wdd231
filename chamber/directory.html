@@ -16,7 +16,7 @@
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts preload -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto" as="style">
@@ -48,7 +48,6 @@
         </nav>
     </header>
 
-    <!-- Main Content: Grid/List controls + container -->
     <main>
         <h1>Anaheim Chamber Directory</h1>
         <section class="view-toggle">
@@ -61,24 +60,35 @@
 
     <!-- Footer -->
     <footer>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/">
-                <img src="images/facebook.svg" alt="Facebook" width="32" height="32">
-            </a>
-            <a href="https://x.com/?lang=en">
-                <img src="images/x.svg" alt="twitter" width="32" height="32">
-            </a>
+        <div class="footer-inner">
+  
+            <div class="footer-col footer-contact">
+                <h4>Anaheim Chamber of Commerce</h4>
+                <p>123 Main Street<br>Anaheim, CA 92805</p>
+                <p><a href="mailto:info@anaheimcc.org">info@anaheimcc.org</a><br>
+                    (714) 555-1234</p>
+            </div>
+         
+            <div class="footer-col footer-social">
+                <a href="https://facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
+                        alt="Facebook Logo"></a>
+                <a href="https://x.com/?lang=en" aria-label="Twitter"><img src="images/x.svg" alt="Twitter Logo"></a>
+                <a href="https://linkedin.com/company/" aria-label="LinkedIn"><img src="images/linkedin.svg"
+                        alt="LinkedIn Logo"></a>
+            </div>
+    
+            <div class="footer-col footer-credits">
+                <p>WDD231 Class Project<br>
+                    Ezra Daniel Rivera<br>
+                    © 2025 Anaheim Chamber of Commerce<br>
+                    Last modified: <time id="lastModified" datetime="1970-01-01T00:00:00Z">Loading...</time>
+                </p>
+            </div>
         </div>
-    
-        <p>Contact: Ezra D. Rivera | WDD 231</p>
-        <p>&copy; <span id="year"></span> Anaheim Chamber of Commerce</p>
-    
-        <p>Last modified:
-            <time id="lastModified" datetime="1970-01-01T00:00">0000-00-00 00:00</time></p>
-        </footer>
+    </footer>
 
     <!-- JS -->
-    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/main.mjs"></script>
 </body>
 
 </html>

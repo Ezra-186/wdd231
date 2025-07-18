@@ -1,0 +1,50 @@
+/* Layout for sticky footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Weather card styling */
+.card {
+    max-width: 320px;
+    margin: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.card h2 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.card #description {
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.card #temperature {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: #000;
+}
+
+/* Footer styling */
+footer {
+    background: #f2f2f2;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}

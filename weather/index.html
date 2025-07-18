@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Current Weather in Trier, Germany</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Current Weather in Trier, Germany</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2 id="town-name">Loading…</h2>
+            <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption id="description">…</figcaption>
+            </figure>
+            <p id="temperature">--&deg;F</p>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Ezra Daniel Rivera
+        </p>
+        <p id="lastModified">
+            Last updated: <span id="year"></span> at <span id="last-modified-time"></span>
+        </p>
+    </footer>
+    <script type="module" src="scripts/main.mjs"></script>
+</body>
+
+</html>
