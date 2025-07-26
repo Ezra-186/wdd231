@@ -1,3 +1,4 @@
+// main.mjs
 import { initNavToggle } from './navToggle.mjs';
 import { initViewToggle } from './gridListToggle.mjs';
 import { loadMembers } from './members.mjs';
@@ -10,19 +11,9 @@ import { loadSpotlights } from './spotlights.mjs';
 
 window.addEventListener('DOMContentLoaded', async () => {
     initNavToggle();
-    initViewToggle();
-    loadMembers();         
-    loadSpotlights();   
-    setFooterDates(); 
+    setFooterDates();
 
-    // Weather 3 day forcast
-    const [currentData, forecastData] = await Promise.all([
-        fetchWeather(),
-        fetchForecast()
-    ]);
-    displayWeather(currentData);
-    displayForecast(forecastData);
-
+    
     if (location.pathname.endsWith('join.html')) {
         const { initJoinPage } = await import('./join.mjs');
         initJoinPage();
@@ -31,6 +22,18 @@ window.addEventListener('DOMContentLoaded', async () => {
     if (location.pathname.endsWith('thankyou.html')) {
         const { initThankYouPage } = await import('./thankyou.mjs');
         initThankYouPage();
-        return;
+        return;       
     }
+
+    
+    initViewToggle();
+    loadMembers();
+    loadSpotlights();
+
+    const [current, forecast] = await Promise.all([
+        fetchWeather(),
+        fetchForecast()
+    ]);
+    displayWeather(current);
+    displayForecast(forecast);
 });
