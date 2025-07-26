@@ -58,38 +58,38 @@
                 <div class="field-group two-col">
                     <label>
                         First Name
-                        <input type="text" name="firstName" required autocomplete="given-name">
+                        <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
                     </label>
                     <label>
                         Last Name
-                        <input type="text" name="lastName" required autocomplete="family-name">
+                        <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
                     </label>
                 </div>
 
                 <label>
                     Organizational Title
-                    <input type="text" name="orgTitle" autocomplete="organization-title">
+                    <input type="text" name="orgTitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Enter your organizational title (at least 7 letters)">
                 </label>
 
                 <div class="field-group two-col">
                     <label>
                         Email
-                        <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+                        <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" title="Enter a valid email address">
                     </label>
                     <label>
                         Mobile Phone
-                        <input type="tel" name="phone" required autocomplete="tel">
+                        <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
                     </label>
                 </div>
 
                 <label>
                     Business or Organization Name
-                    <input type="text" name="orgName" required autocomplete="organization">
+                    <input type="text" name="orgName" required autocomplete="organization" title="Enter the name of your business or organization">
                 </label>
 
                 <label>
                     Membership Level
-                    <select name="level" required>
+                    <select name="level" required title="Choose a membership level">
                         <option value="">Please choose</option>
                         <option value="nonprofit">Non-Profit</option>
                         <option value="bronze">Bronze</option>
@@ -100,7 +100,7 @@
 
                 <label>
                     About Your Organization
-                    <textarea name="description"></textarea>
+                    <textarea name="description" title="Briefly describe your organization"></textarea>
                 </label>
 
                 <input type="hidden" id="ts" name="timestamp">
