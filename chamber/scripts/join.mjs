@@ -1,8 +1,6 @@
 export function initJoinPage() {
-    // 1. populate timestamp
     document.getElementById('ts').value = new Date().toISOString();
 
-    // 2. modal wiring
     const modal = document.getElementById('level-modal');
     const contentEl = modal.querySelector('.modal-content');
     const closeBtn = modal.querySelector('.close-modal');
@@ -14,7 +12,6 @@ export function initJoinPage() {
         gold: ['Silver perks', 'Premium listing', 'Advertising spots']
     };
 
-    // helper to build and show the modal
     function showLevelDetails(levelKey) {
         const items = benefits[levelKey] || [];
         contentEl.innerHTML = `
@@ -24,7 +21,6 @@ export function initJoinPage() {
         modal.showModal();
     }
 
-    // wire up each “Learn More” button
     document.querySelectorAll('.info-btn').forEach(btn => {
         btn.addEventListener('click', e => {
             e.preventDefault();
@@ -33,7 +29,6 @@ export function initJoinPage() {
         });
     });
 
-    // close handlers
     closeBtn.addEventListener('click', () => modal.close());
     modal.addEventListener('click', e => {
         if (e.target === modal) modal.close();
