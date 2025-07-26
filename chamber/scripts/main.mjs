@@ -14,15 +14,15 @@ window.addEventListener('DOMContentLoaded', async () => {
     setFooterDates();
 
     
-    if (location.pathname.endsWith('join.html')) {
-        const { initJoinPage } = await import('./join.mjs');
-        initJoinPage();
-    }
-
     if (location.pathname.endsWith('thankyou.html')) {
         const { initThankYouPage } = await import('./thankyou.mjs');
         initThankYouPage();
-        return;       
+        return;
+    }
+
+    if (location.pathname.endsWith('join.html')) {
+        const { initJoinPage } = await import('./join.mjs');
+        initJoinPage();
     }
 
     

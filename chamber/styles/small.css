@@ -716,6 +716,10 @@ header h2 {
   color: #333;
 }
 
+#submitted-data {
+  min-height: 11rem;
+  /* about 7 dt/dd pairs = ~11rem */
+}
 
 /*------------------
       Footer

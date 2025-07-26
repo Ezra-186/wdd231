@@ -15,12 +15,10 @@ export function initThankYouPage() {
 
     const container = document.getElementById('submitted-data');
 
-    // Capitalize level
     const levelLabel = data.level
         ? data.level.charAt(0).toUpperCase() + data.level.slice(1)
         : '—';
 
-    // Format timestamp nicely
     const when = data.timestamp
         ? new Date(data.timestamp).toLocaleString()
         : '—';
