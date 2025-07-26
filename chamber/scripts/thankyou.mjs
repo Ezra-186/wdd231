@@ -1,4 +1,3 @@
-// Export a function so you can call it from main.mjs (or directly)
 export function initThankYouPage() {
     const params = new URLSearchParams(window.location.search);
     const data = {
