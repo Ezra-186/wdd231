@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Join</title>
+    <meta name="description" content="Directory of members for the Anaheim Chamber of Commerce">
+    <meta name="author" content="Ezra D. Rivera">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chamber Directory – Anaheim">
+    <meta property="og:description" content="Find local businesses and organizations in Anaheim.">
+    <meta property="og:image" content="https://ezra-186.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:url" content="https://ezra-186.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto" as="style">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- CSS normalize -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <!-- Header + Navigation -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo_anahiem_1.webp" alt="Anaheim Chamber of Commerce logo" class="site-logo" width="200"
+                height="97"></a>
+        <h2>Anaheim Chamber Directory</h2>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle menu"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="current"><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="join-main">
+        <h1>Join the Chamber</h1>
+        <div class="form-wrapper">
+            <h2 class="form-title">Membership Application Form</h2>
+            <form id="join-form" method="get" action="thankyou.html">
+
+                <div class="field-group two-col">
+                    <label>
+                        First Name
+                        <input type="text" name="firstName" required autocomplete="given-name">
+                    </label>
+                    <label>
+                        Last Name
+                        <input type="text" name="lastName" required autocomplete="family-name">
+                    </label>
+                </div>
+
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgTitle" pattern="[A-Za-z\\s\\-]{7,}" autocomplete="organization-title">
+                </label>
+
+                <div class="field-group two-col">
+                    <label>
+                        Email
+                        <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+                    </label>
+                    <label>
+                        Mobile Phone
+                        <input type="tel" name="phone" required autocomplete="tel">
+                    </label>
+                </div>
+
+                <label>
+                    Business or Organization Name
+                    <input type="text" name="orgName" required autocomplete="organization">
+                </label>
+
+                <label>
+                    Membership Level
+                    <select name="level" required>
+                        <option value="">Please choose</option>
+                        <option value="nonprofit">Non-Profit</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
+
+                <label>
+                    About Your Organization
+                    <textarea name="description"></textarea>
+                </label>
+
+                <input type="hidden" id="ts" name="timestamp">
+
+                <button type="submit">Become a Member</button>
+            </form>
+        </div>
+        <div class="levels-wrapper">
+            <h2 class="levels-title">Membership Levels</h2>
+            <section id="levels">
+                <div class="level-card" data-level="nonprofit">
+                    <h3>Non-Profit Membership</h3>
+                    <button type="button" class="info-btn">Learn More</button>
+                </div>
+                <div class="level-card" data-level="bronze">
+                    <h3>Bronze Membership</h3>
+                    <button type="button" class="info-btn">Learn More</button>
+                </div>
+                <div class="level-card" data-level="silver">
+                    <h3>Silver Membership</h3>
+                    <button type="button" class="info-btn">Learn More</button>
+                </div>
+                <div class="level-card" data-level="gold">
+                    <h3>Gold Membership</h3>
+                    <button type="button" class="info-btn">Learn More</button>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="level-modal">
+            <button class="close-modal" aria-label="Close">✖</button>
+            <div class="modal-content"></div>
+        </dialog>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+
+            <div class="footer-col footer-contact">
+                <h4>Anaheim Chamber of Commerce</h4>
+                <p>123 Main Street<br>Anaheim, CA 92805</p>
+                <p><a href="mailto:info@anaheimcc.org">info@anaheimcc.org</a><br>
+                    (714) 555-1234</p>
+            </div>
+
+            <div class="footer-col footer-social">
+                <a href="https://facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
+                        alt="Facebook Logo"></a>
+                <a href="https://x.com/?lang=en" aria-label="Twitter"><img src="images/x.svg" alt="Twitter Logo"></a>
+                <a href="https://linkedin.com/company/" aria-label="LinkedIn"><img src="images/linkedin.svg"
+                        alt="LinkedIn Logo"></a>
+            </div>
+
+            <div class="footer-col footer-credits">
+                <p>WDD231 Class Project<br>
+                    Ezra Daniel Rivera<br>
+                    © 2025 Anaheim Chamber of Commerce<br>
+                    Last modified: <time id="lastModified" datetime="1970-01-01T00:00:00Z">Loading...</time>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script type="module" src="scripts/main.mjs"></script>
+</body>
+
+</html>

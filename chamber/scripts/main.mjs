@@ -15,11 +15,22 @@ window.addEventListener('DOMContentLoaded', async () => {
     loadSpotlights();   
     setFooterDates(); 
 
-    // Weather 3-day
+    // Weather 3 day forcast
     const [currentData, forecastData] = await Promise.all([
         fetchWeather(),
         fetchForecast()
     ]);
     displayWeather(currentData);
     displayForecast(forecastData);
+
+    if (location.pathname.endsWith('join.html')) {
+        const { initJoinPage } = await import('./join.mjs');
+        initJoinPage();
+    }
+
+    if (location.pathname.endsWith('thankyou.html')) {
+        const { initThankYouPage } = await import('./thankyou.mjs');
+        initThankYouPage();
+        return;
+    }
 });

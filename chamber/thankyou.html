@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You - Anaheim Chamber</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Directory of members for the Anaheim Chamber of Commerce">
+    <meta name="author" content="Ezra D. Rivera">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chamber Directory – Anaheim">
+    <meta property="og:description" content="Find local businesses and organizations in Anaheim.">
+    <meta property="og:image" content="https://ezra-186.github.io/wdd231/chamber/images/og-image.png">
+    <meta property="og:url" content="https://ezra-186.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto" as="style">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- CSS normalize -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo_anahiem_1.webp" alt="Anaheim Chamber of Commerce logo" class="site-logo" width="200"
+                height="97"></a>
+        <h2>Anaheim Chamber Directory</h2>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle menu"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="current"><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="nav-placeholder"></div>
+    <script type="module" src="scripts/navigation.mjs"></script>
+
+    <main id="thankyou-main">
+        <h1>Thank You!</h1>
+        <p>Your application has been received. Here’s what you sent us:</p>
+
+        <div id="submitted-data">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+
+            <div class="footer-col footer-contact">
+                <h4>Anaheim Chamber of Commerce</h4>
+                <p>123 Main Street<br>Anaheim, CA 92805</p>
+                <p><a href="mailto:info@anaheimcc.org">info@anaheimcc.org</a><br>
+                    (714) 555-1234</p>
+            </div>
+
+            <div class="footer-col footer-social">
+                <a href="https://facebook.com/" aria-label="Facebook"><img src="images/facebook.svg"
+                        alt="Facebook Logo" width="24" height="24"></a>
+                <a href="https://x.com/?lang=en" aria-label="Twitter"><img src="images/x.svg" alt="Twitter Logo" width="24" height="24"></a>
+                <a href="https://linkedin.com/company/" aria-label="LinkedIn"><img src="images/linkedin.svg"
+                        alt="LinkedIn Logo" width="24" height="24"></a>
+            </div>
+
+            <div class="footer-col footer-credits">
+                <p>WDD231 Class Project<br>
+                    Ezra Daniel Rivera<br>
+                    © 2025 Anaheim Chamber of Commerce<br>
+                    Last modified: <time id="lastModified" datetime="1970-01-01T00:00:00Z">Loading...</time>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/main.mjs"></script>
+</body>
+
+</html>

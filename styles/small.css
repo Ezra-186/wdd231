@@ -195,3 +195,31 @@ footer {
     width: 24px;
     height: 24px;
 }
+
+
+/* Modal container */
+#course-details {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Backdrop shading */
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Close button */
+#course-details .close-modal {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
