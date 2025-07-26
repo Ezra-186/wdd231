@@ -1,4 +1,3 @@
-// main.mjs
 import { initNavToggle } from './navToggle.mjs';
 import { initViewToggle } from './gridListToggle.mjs';
 import { loadMembers } from './members.mjs';
