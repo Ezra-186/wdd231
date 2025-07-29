@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site plan for final project">
+    <meta name="author" content="Ezra Daniel Rivera">
+    <title>Site Plan - True Focus Photography</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Site Plan: True Focus Photography</h1>
+
+    <main>
+        <section class="section">
+            <h2>Site Name</h2>
+            <p><strong>True Focus Photography</strong> — captures sincere, emotionally focused moments in weddings,
+                engagements, and family portraits.</p>
+        </section>
+
+        <section class="section">
+            <h2>Site Purpose</h2>
+            <p>This site will showcase the photographer’s portfolio and enable visitors to
+                search inspirational images via the Unsplash API and to book sessions through
+                a transactional form powered by EmailJS.</p>
+        </section>
+
+        <section class="section">
+            <h2>Scenarios</h2>
+            <ul>
+                <li>How can I find example photos for a specific theme or style?</li>
+                <li>How do I book a wedding or portrait session online?</li>
+                <li>What areas and venues does the photographer serve?</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Project Organization</h2>
+            <ul>
+                <li><strong>Folder Structure:</strong>
+                    <ul>
+                        <li><code>/styles</code>: normalize.css, main.css, gallery.css</li>
+                        <li><code>/scripts</code>: config.mjs, fetchPhotos.mjs, renderPhotos.mjs, emailForm.mjs,
+                            footerDates.mjs, main.mjs</li>
+                        <li><code>/images</code>: logo.png, hero-placeholder.jpg, wireframes</li>
+                    </ul>
+                </li>
+                <li><strong>Global CSS:</strong> Sticky-footer pattern (body flex container, main flex:1)</li>
+                <li><strong>ES Modules:</strong> All scripts use <code>type="module"</code> and deferred loading</li>
+                <li><strong>API Integration:</strong> Unsplash for image search, EmailJS for booking form</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Color Scheme</h2>
+            <ul>
+                <li><strong>#4A0D29</strong> — Dark Burgundy (headings, nav, footer)</li>
+                <li><strong>#F3E8E2</strong> — Warm Beige (background)</li>
+                <li><strong>#E4B7B2</strong> — Blush Pink (buttons, accents)</li>
+                <li><strong>#2C2C2C</strong> — Charcoal Gray (body text)</li>
+                <li><strong>#FFFFFF</strong> — White (text on dark backgrounds)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Typography</h2>
+            <ul>
+                <li><strong>Playfair Display</strong> — Headings</li>
+                <li><strong>Lato</strong> — Body text</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Wireframes</h2>
+            <h3>Desktop View</h3>
+            <img src="images/Home_Page_Wireframe.png" alt="Desktop wireframe layout for home page">
+            <h3>Mobile View</h3>
+            <img src="images/Mobile_Page_Wireframe.png" alt="Mobile wireframe layout for home page">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Daniel Ezra Rivera - True Focus Photography</p>
+    </footer>
+</body>
+
+</html>
