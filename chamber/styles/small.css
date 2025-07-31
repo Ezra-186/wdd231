@@ -722,6 +722,76 @@ header h2 {
 }
 
 /*------------------
+   discover cards
+-------------------*/
+
+#allplaces {
+  display: grid;
+  gap: 1rem;
+}
+
+#allplaces .card {
+  display: grid;
+  grid-template-areas:
+    "name"
+    "photograph"
+    "description"
+    "location"
+    "more";
+  border: 1px solid #999;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#allplaces .card h2 {
+  grid-area: name;
+  margin: 1rem 10px;
+}
+
+#allplaces .card img {
+  grid-area: photograph;
+  width: 100%;
+  height: auto;
+}
+
+#allplaces .card p.desc {
+  grid-area: description;
+  margin: 1rem 10px;
+}
+
+#allplaces .card address {
+  grid-area: location;
+  margin: 1rem 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+#visit-message {
+  text-align: center;
+  font-size: clamp(1.4rem, 2vw + 1rem, 2.4rem);
+  margin: 1rem auto 2rem;
+  max-width: 35ch;
+  background: #f3f7ff;
+  border: 1px solid #c9d5f0;
+  border-radius: 6px;
+  padding: .75rem 1rem;
+}
+
+#allplaces .card .learn-btn {
+  grid-area: more;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #004b85;;
+  color: #fff;
+  padding: .6rem 0;
+  border-radius: .25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/*------------------
       Footer
 -------------------*/
 

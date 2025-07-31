@@ -24,6 +24,12 @@ window.addEventListener('DOMContentLoaded', async () => {
         initJoinPage();
     }
 
+    if (location.pathname.endsWith('discover.html')) {
+        const { initDiscoverPage } = await import('./discover.mjs');
+        initDiscoverPage();
+        return;
+    }
+
     
     initViewToggle();
     loadMembers();
