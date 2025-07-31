@@ -725,6 +725,16 @@ header h2 {
    discover cards
 -------------------*/
 
+#discover-main h1 {
+  font-size: 2.2rem;
+  color: var(--accent);
+  text-align: center;
+  margin: 1.5rem auto;
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
 #allplaces {
   display: grid;
   gap: 1rem;
@@ -783,7 +793,8 @@ header h2 {
   display: block;
   width: 100%;
   text-align: center;
-  background: #004b85;;
+  background: #004b85;
+  ;
   color: #fff;
   padding: .6rem 0;
   border-radius: .25rem;
