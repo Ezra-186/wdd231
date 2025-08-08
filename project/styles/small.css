@@ -443,6 +443,10 @@ button.form-submit,
     text-align: center;
 }
 
+.contact .intro {
+    font-size: 0.95rem;
+}
+
 form#contact-form {
     display: grid;
     gap: 1rem;
