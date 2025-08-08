@@ -677,7 +677,7 @@ footer {
 }
 
 /* ===== ABOUT ===== */
-/* .about-container {
+.about-container {
     max-width: 800px;
     margin: 3rem auto;
     padding: 2.5rem 1.5rem;
@@ -724,10 +724,10 @@ footer {
 .about-container .services li:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-} */
+}
 
 /* team */
-/* .team-grid {
+.team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
@@ -763,7 +763,7 @@ footer {
 .team-member p {
     font-size: 1rem;
     color: var(--color-charcoal);
-} */
+}
 
 /* ===== REFERENCES ===== */
 .references-page main {
