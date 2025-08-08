@@ -1,5 +1,4 @@
 @media (min-width: 769px) {
-
     h1 {
         font-size: 2.75rem;
     }
@@ -20,5 +19,4 @@
     .thumb-media img {
         object-fit: cover;
     }
-
 }
