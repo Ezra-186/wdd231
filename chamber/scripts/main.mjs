@@ -7,12 +7,12 @@ import { displayWeather } from './displayWeather.mjs';
 import { fetchForecast } from './fetchForecast.mjs';
 import { displayForecast } from './displayForecast.mjs';
 import { loadSpotlights } from './spotlights.mjs';
+import { updateLearnMoreLinks } from './learnMore.mjs';
 
 window.addEventListener('DOMContentLoaded', async () => {
     initNavToggle();
     setFooterDates();
 
-    
     if (location.pathname.endsWith('thankyou.html')) {
         const { initThankYouPage } = await import('./thankyou.mjs');
         initThankYouPage();
@@ -26,11 +26,11 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     if (location.pathname.endsWith('discover.html')) {
         const { initDiscoverPage } = await import('./discover.mjs');
-        initDiscoverPage();
+        await initDiscoverPage();      // waits for cards to be created
+        updateLearnMoreLinks();        // now safely update the link text
         return;
     }
 
-    
     initViewToggle();
     loadMembers();
     loadSpotlights();

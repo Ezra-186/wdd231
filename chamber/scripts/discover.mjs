@@ -1,6 +1,6 @@
 import { places } from '../data/places.mjs';
 
-export function initDiscoverPage() {
+export async function initDiscoverPage() {
     const container = document.getElementById('allplaces');
     const msgBox = document.getElementById('visit-message');
     const DAY_MS = 86_400_000;
@@ -16,7 +16,9 @@ export function initDiscoverPage() {
             <address>${p.address} • <strong>${p.cost}</strong></address>
             <a class="learn-btn"
                 href="https://www.google.com/search?q=${encodeURIComponent(p.name + ' Anaheim CA')}"
-                target="_blank" rel="noopener">Learn More</a>`;
+                target="_blank" rel="noopener">
+                Learn more about ${p.name}
+            </a>`;
         container.append(card);
     });
 
@@ -29,4 +31,6 @@ export function initDiscoverPage() {
             : `Welcome back! It has been ${Math.round((now - then) / DAY_MS)} days since your last visit.`)
         : 'Welcome! Thanks for exploring Anaheim with us for the first time.';
     localStorage.setItem('lastVisit', now);
+
+    return Promise.resolve();
 }
