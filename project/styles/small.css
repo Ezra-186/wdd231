@@ -257,6 +257,10 @@ nav.nav-links .cta:hover {
 }
 
 /* Grid layout */
+.grid[aria-busy="true"] {
+    visibility: hidden;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -333,6 +337,7 @@ nav.nav-links .cta:hover {
 }
 
 
+js Copy Edit
 
 /* ===== CALL TO ACTION BUTTON ===== */
 .cta-button {

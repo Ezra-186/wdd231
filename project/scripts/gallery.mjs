@@ -1,7 +1,5 @@
-
 async function fetchGalleryData() {
     try {
-    
         const res = await fetch('data/gallery.json');
         if (!res.ok) throw new Error(`Gallery load failed: ${res.status}`);
         return await res.json();
@@ -10,6 +8,7 @@ async function fetchGalleryData() {
         return [];
     }
 }
+
 function renderGallery(items, container) {
     container.innerHTML = '';
     const frag = document.createDocumentFragment();
@@ -38,19 +37,23 @@ function renderGallery(items, container) {
     container.appendChild(frag);
 }
 
-
 export async function initGallery() {
     const galleryContainer = document.querySelector('.grid');
-    const filterBtns = document.querySelectorAll('.filters button');
     if (!galleryContainer) return;
 
+    galleryContainer.setAttribute('aria-busy', 'true');
+    galleryContainer.innerHTML = '';
+
+    const filterBtns = document.querySelectorAll('.filters button');
     const galleryData = await fetchGalleryData();
 
-    const applyFilter = filter => {
+    const applyFilter = (filter) => {
+        galleryContainer.setAttribute('aria-busy', 'true');
         const items = filter === 'all'
             ? galleryData
             : galleryData.filter(i => i.category === filter);
         renderGallery(items, galleryContainer);
+        galleryContainer.removeAttribute('aria-busy');
     };
 
     if (filterBtns.length) {
@@ -64,5 +67,6 @@ export async function initGallery() {
         applyFilter('all');
     } else {
         renderGallery(galleryData.slice(0, 6), galleryContainer);
+        galleryContainer.removeAttribute('aria-busy');
     }
 }
