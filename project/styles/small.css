@@ -34,6 +34,11 @@ h1, h2, h3 {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
+h1 {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    line-height: 1.2;
+}
+
 /* Main content area expansion */
 main {
     flex: 1;
