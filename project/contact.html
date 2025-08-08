@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Ezra Rivera">
+    <meta name="description"
+        content="True Focus Photography: Capturing sincere and emotionally focused moments for weddings, engagements, and families.">
+    <title>Contact True Focus Photography</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact True Focus Photography">
+    <meta property="og:description"
+        content="Get in touch to book a session, check availability, or ask a question. We’d love to hear from you.">
+    <meta property="og:image" content="https://ezra-186.github.io/wdd231/project/images/TFF_Logo_14.svg">
+    <meta property="og:url" content="https://ezra-186.github.io/wdd231/project/contact.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon_3.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <!-- CSS normalize -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 769px)">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/TFF_Logo_14.svg" alt="True Focus Photography logo" class="logo-img" width="32" height="32">
+            <span>True Focus Photography</span>
+        </a>
+        <button class="mobile-menu" aria-label="Toggle Navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="cta">Get in Touch</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <p>Have questions or want to book a session? Leave your info below and click Continue.</p>
+
+            <form id="contact-form" action="review.html" method="GET" novalidate>
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="Email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                        title="Please enter a valid email address, e.g. alice@example.com">
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Which services interest you? <span class="required">*</span></legend>
+                    <div class="toggle-group">
+                        <label class="toggle-label">
+                            <input type="checkbox" name="Reason" value="Weddings">
+                            <span class="toggle-switch"></span>
+                            Weddings
+                        </label>
+                        <label class="toggle-label">
+                            <input type="checkbox" name="Reason" value="Portraits">
+                            <span class="toggle-switch"></span>
+                            Portraits
+                        </label>
+                        <label class="toggle-label">
+                            <input type="checkbox" name="Reason" value="Family Pictures">
+                            <span class="toggle-switch"></span>
+                            Family Pictures
+                        </label>
+                        <label class="toggle-label">
+                            <input type="checkbox" name="Reason" value="Engagements">
+                            <span class="toggle-switch"></span>
+                            Engagements
+                        </label>
+                        <label class="toggle-label">
+                            <input type="checkbox" name="Reason" value="Event">
+                            <span class="toggle-switch"></span>
+                            Event
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="event-date">Event Date <span class="required">*</span></label>
+                    <input type="date" id="event-date" name="EventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject <span class="note">(optional)</span></label>
+                    <input type="text" id="subject" name="Subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message <span class="note">(optional)</span></label>
+                    <textarea id="message" name="Message" rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="form-submit">Send My Request</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Created by Daniel Ezra Rivera</p>
+        <div class="socials">
+            <a href="https://twitter.com" aria-label="Twitter">
+                <img src="images/logo.svg" alt="Twitter logo" class="social-icon" width="24" height="24">
+            </a>
+            <a href="https://instagram.com" aria-label="Instagram">
+                <img src="images/instagram.svg" alt="Instagram logo" class="social-icon" width="24" height="24">
+            </a>
+            <a href="https://facebook.com" aria-label="Facebook">
+                <img src="images/facebook_1.svg" alt="Facebook logo" class="social-icon" width="24" height="24">
+            </a>
+        </div>
+        <p id="last-updated"></p>
+        <div class="footer-video">
+            <a href="https://youtu.be/YourDemoID" target="_blank" rel="noopener noreferrer">
+                🎥 Video Overview
+            </a>
+        </div>
+        <p><a href="references.html" class="footer-link">References</a></p>
+    </footer>
+
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="scripts/main.mjs"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+import { setFooterDates } from './footerDates.mjs';
+import { initNavToggle } from './navToggle.mjs';
+import { initGallery } from './gallery.mjs';
+import { initLightbox } from './lightbox.mjs';
+import { initFormStorage } from './storage.mjs';
+import { initValidation } from './validateForm.mjs';
+import { initEmailForm } from './emailForm.mjs';
+import { initReviewPage } from './reviewData.mjs';
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (typeof setFooterDates === 'function') setFooterDates();
+  if (typeof initNavToggle === 'function') initNavToggle();
+
+  const grid = document.querySelector('.grid');
+  if (grid) {
+    if (typeof initGallery === 'function') initGallery();
+    if (typeof initLightbox === 'function') initLightbox();
+  }
+
+  const form = document.getElementById('contact-form');
+  if (form) {
+    if (typeof initFormStorage === 'function') initFormStorage(form);
+    if (typeof initValidation === 'function') initValidation(form);
+    if (typeof initEmailForm === 'function') initEmailForm();
+  }
+
+  if (document.getElementById('review-data')) {
+    if (typeof initReviewPage === 'function') initReviewPage();
+  }
+  const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const links = document.querySelectorAll('header nav a');
+
+  links.forEach(a => {
+    a.classList.remove('cta');
+    a.removeAttribute('aria-current');
+
+    const linkURL = new URL(a.getAttribute('href'), location.href);
+    const linkPage = (linkURL.pathname.split('/').pop() || 'index.html').toLowerCase();
+
+    if (linkPage === path) {
+      a.classList.add('cta');
+      a.setAttribute('aria-current', 'page');
+    }
+  });
+
+});

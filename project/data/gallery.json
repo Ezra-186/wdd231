@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "category": "Weddings",
+        "title": "Sunset Couple",
+        "src": "images/Website_19.jpg",
+        "description": "A romantic sunset shot of a newlywed couple."
+    },
+    {
+        "id": 2,
+        "category": "Family Portraits",
+        "title": "Family Portraits",
+        "src": "images/Website_34_s.webp",
+        "description": "A happy family portrait captured outdoors."
+    },
+    {
+        "id": 3,
+        "category": "Weddings",
+        "title": "Bride and Groom",
+        "src": "images/Website_17_s.webp",
+        "description": "Bride and groom sharing a special moment."
+    },
+    {
+        "id": 4,
+        "category": "Weddings",
+        "title": "Weddings",
+        "src": "images/Website_38_S.webp",
+        "description": "A Bride and Groom happy moment."
+    },
+    {
+        "id": 5,
+        "category": "Engagements",
+        "title": "Engagement",
+        "src": "images/Website_5_s.webp",
+        "description": "An engagement session with natural light."
+    },
+    {
+        "id": 6,
+        "category": "Bridesmaids",
+        "title": "Bridesmaid",
+        "src": "images/Website_26.jpg",
+        "description": "Bridesmaids posing in matching dresses."
+    },
+    {
+        "id": 7,
+        "category": "Groomsmen",
+        "title": "Groomsmen",
+        "src": "images/Website_11_s.webp",
+        "description": "Groomsmen posing with confidence."
+    },
+    {
+        "id": 8,
+        "category": "Engagements",
+        "title": "Engagements",
+        "src": "images/Website_35.webp",
+        "description": "A couple celebrating their engagement."
+    },
+    {
+        "id": 9,
+        "category": "Weddings",
+        "title": "Weddings",
+        "src": "images/Website_1_s.webp",
+        "description": "An elegant wedding photo in the beautiful field."
+    },
+    {
+        "id": 10,
+        "category": "Engagements",
+        "title": "Engagements",
+        "src": "images/Website_4_s.webp",
+        "description": "Engagement session with beach fog around them."
+    },
+    {
+        "id": 11,
+        "category": "Groomsmen",
+        "title": "Groomsmen",
+        "src": "images/Website_27_s.webp",
+        "description": "Groomsmen caring the groom."
+    },
+    {
+        "id": 12,
+        "category": "Groomsmen",
+        "title": "Groomsmen",
+        "src": "images/Website_28_s.webp",
+        "description": "Casual portrait of the groomsmen group."
+    },
+    {
+        "id": 13,
+        "category": "Engagements",
+        "title": "Engagements",
+        "src": "images/Website_24_s.webp",
+        "description": "Engagement photo in a scenic park."
+    },
+    {
+        "id": 14,
+        "category": "Family Portraits",
+        "title": "Family Portraits",
+        "src": "images/Website_33_s.webp",
+        "description": "Family gathered for a Grandchildren picture."
+    },
+    {
+        "id": 15,
+        "category": "Weddings",
+        "title": "Weddings",
+        "src": "images/Website_2_s.webp",
+        "description": "Close-up of the newlyweds kissing."
+    }
+]
