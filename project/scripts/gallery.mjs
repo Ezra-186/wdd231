@@ -3,8 +3,7 @@ async function fetchGalleryData() {
         const res = await fetch('data/gallery.json');
         if (!res.ok) throw new Error(`Gallery load failed: ${res.status}`);
         return await res.json();
-    } catch (err) {
-        console.error(err);
+    } catch (_) {
         return [];
     }
 }

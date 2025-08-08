@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daniel Ezra Rivera">
@@ -28,21 +29,16 @@
      connect-src 'self' https://api.emailjs.com;
      frame-ancestors 'none'">
 
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-            rel="stylesheet">
-    </noscript>
+        rel="stylesheet">
+
     <link rel="preload" as="image" href="images/pic_2.webp"
-        imagesrcset="images/Pic_2.webp 400w, images/Pic_2@2x.webp 800w" imagesizes="(max-width: 600px) 100vw, 400px">
+        imagesrcset="images/Pic_2.webp 400w, images/Pic_22x.webp 800w" imagesizes="(max-width: 600px) 100vw, 400px">
     <!-- CSS normalize -->
     <link rel="stylesheet" href="styles/normalize.css">
     <!-- Main styles -->
@@ -75,9 +71,7 @@
             <div class="hero-text">
                 <h1>Capturing Your Story One Frame at a Time</h1>
                 <div class="cta-button">
-                    <button type="button" onclick="window.location='gallery.html'">
-                        View the Gallery
-                    </button>
+                    <button type="button" id="view-portfolio">View Our Work</button>
                 </div>
             </div>
             <div class="hero-image-container">
@@ -123,7 +117,7 @@
         </section>
 
         <div class="cta-button">
-            <button onclick="window.location.href='contact.html'">Book a Session</button>
+            <button type="button" id="book-session">Book a Session</button>
         </div>
     </main>
 

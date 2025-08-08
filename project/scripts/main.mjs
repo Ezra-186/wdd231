@@ -43,4 +43,16 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  document.getElementById('view-portfolio')?.addEventListener('click', () => {
+    location.href = 'gallery.html';
+  });
+  document.getElementById('book-session')?.addEventListener('click', () => {
+    location.href = 'contact.html';
+  });
+
+  const f = document.querySelector('link[rel~="icon"]') || document.createElement('link');
+  f.rel = 'icon';
+  f.href = 'images/favicon.ico?v=3';
+  document.head.appendChild(f);
+
 });
