@@ -12,18 +12,32 @@ async function fetchGalleryData() {
 }
 function renderGallery(items, container) {
     container.innerHTML = '';
+    const frag = document.createDocumentFragment();
+
     items.forEach(item => {
         const thumb = document.createElement('div');
         thumb.className = 'thumb';
         thumb.innerHTML = `
-      <img src="${item.src}" alt="${item.title}" loading="lazy">
+      <div class="thumb-media">
+        <img
+          src="${item.src}"
+          alt="${item.title}"
+          loading="lazy"
+          decoding="async"
+          width="400"
+          height="300"
+          sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 90vw">
+      </div>
       <p class="title">${item.title}</p>
       <p class="description">${item.description}</p>
       <p class="category">${item.category}</p>
     `;
-        container.appendChild(thumb);
+        frag.appendChild(thumb);
     });
+
+    container.appendChild(frag);
 }
+
 
 export async function initGallery() {
     const galleryContainer = document.querySelector('.grid');

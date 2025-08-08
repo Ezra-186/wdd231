@@ -47,7 +47,7 @@ h2 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2.25rem, 5vw, 3rem);
     line-height: 1.2;
 }
 
@@ -58,6 +58,18 @@ h1 {
     text-align: center;
     margin-bottom: 1rem;
 
+}
+
+.about-container>h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+.references-page h1 {
+    font-size: 2rem;
+}
+
+.siteplan-page h1 {
+    font-size: 2rem;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
@@ -253,24 +265,49 @@ nav.nav-links .cta:hover {
 }
 
 /* Gallery thumbnail styling */
+
+/* Card */
 .thumb {
     position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--color-beige, #f4f4f4);
 }
 
-.thumb img {
+.thumb-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.thumb-media img {
     width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     display: block;
-    cursor: pointer;
     transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.thumb-media::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 40%;
+    background: linear-gradient(to top, var(--color-beige) 0%, transparent 100%);
+    z-index: 1;
+}
+
+.thumb .title,
+.thumb .description,
+.thumb .category {
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
 
 .thumb .title {
-    text-align: center;
     margin: 0.5rem 0 0.25rem;
     font-weight: 700;
     font-size: 1rem;
@@ -278,57 +315,23 @@ nav.nav-links .cta:hover {
 }
 
 .thumb .description {
-    text-align: center;
     margin: 0 0 0.75rem;
     font-size: 0.875rem;
     color: rgba(44, 44, 44, 0.8);
     line-height: 1.3;
 }
 
-.thumb {
-    position: relative;
-}
-
-.thumb::after {
-    z-index: 1;
-}
-
-.thumb img {
-    position: relative;
-    z-index: 0;
-}
-
-.thumb .title,
-.thumb .description {
-    position: relative;
-    z-index: 2;
-}
-
 .thumb .category {
-    text-align: center;
     margin: 0 0 1rem;
     font-size: 0.875rem;
     font-style: italic;
     color: var(--color-burgundy);
-    position: relative;
-    z-index: 2;
 }
 
-/* Hover zoom effect */
-.thumb img:hover {
+.thumb-media img:hover {
     transform: scale(1.05);
 }
 
-/* Gradient overlay for thumbs */
-.thumb::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background: linear-gradient(to top, var(--color-beige) 0%, transparent 100%);
-}
 
 
 /* ===== CALL TO ACTION BUTTON ===== */
@@ -656,6 +659,12 @@ footer {
 .socials a:focus-visible {
     outline: 2px solid var(--color-white);
     outline-offset: 4px;
+}
+
+footer .social-icon {
+    inline-size: 24px;
+    aspect-ratio: 1;
+    display: inline-block;
 }
 
 /* Social icon sizing */

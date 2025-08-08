@@ -18,6 +18,15 @@
 
     <link rel="icon" href="images/favicon_3.ico" type="image/x-icon">
 
+    <!-- Basic CSP for this site -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+         img-src 'self' https: data:;
+         script-src 'self' https://cdn.jsdelivr.net https://cdn.emailjs.com 'unsafe-inline';
+         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+         font-src 'self' https://fonts.gstatic.com;
+         connect-src 'self' https://api.emailjs.com;
+         frame-ancestors 'none'">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,18 +81,12 @@
             </div>
 
             <div class="grid">
-              <figure class="grid-item featured">
-                <img
-                  src="images/Pic_2.webp"
-                  srcset="images/Pic_2.webp 400w, images/Pic_2@2x.webp 800w"
-                  sizes="(min-width: 769px) 400px, 90vw"
-                  width="400" height="267"
-                  alt="Bride and groom portrait"
-                  fetchpriority="high"
-                  loading="eager"
-                  decoding="async">
-                <figcaption>Weddings</figcaption>
-              </figure>
+                <figure class="grid-item featured">
+                    <img src="images/Pic_2.webp" srcset="images/Pic_2.webp 400w, images/Pic_2@2x.webp 800w"
+                        sizes="(min-width: 769px) 400px, 90vw" width="400" height="267" alt="Bride and groom portrait"
+                        fetchpriority="high" loading="eager" decoding="async">
+                    <figcaption>Weddings</figcaption>
+                </figure>
             </div>
         </section>
     </main>
