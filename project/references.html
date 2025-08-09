@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,8 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="True Focus Photography">
-    <meta property="og:description"content="True Focus Photography crafts timeless portraits and event imagery that tell your unique story. Book your session today!">
+    <meta property="og:description"
+        content="True Focus Photography crafts timeless portraits and event imagery that tell your unique story. Book your session today!">
     <meta property="og:image" content="https://ezra-186.github.io/wdd231/chamber/images/hero-large_2.webp">
     <meta property="og:url" content="https://ezra-186.github.io/wdd231/chamber/index.html">
 
@@ -35,6 +36,8 @@
     <!-- CSS normalize -->
     <link rel="stylesheet" href="styles/normalize.css">
     <!-- Main styles -->
+    <link rel="preload" href="styles/small.css" as="style">
+    <link rel="preload" href="styles/large.css" as="style">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 769px)">
 
@@ -58,8 +61,10 @@
         <section>
             <h2>Data, APIs, and Libraries</h2>
             <ul>
-                <li>Custom JSON dataset for gallery items: <code>data/gallery.json</code> (created by Daniel Ezra Rivera).</li>
-                <li>Email service: <a href="https://www.emailjs.com/">EmailJS</a> (client SDK used for form submission).</li>
+                <li>Custom JSON dataset for gallery items: <code>data/gallery.json</code> (created by Daniel Ezra
+                    Rivera).</li>
+                <li>Email service: <a href="https://www.emailjs.com/">EmailJS</a> (client SDK used for form submission).
+                </li>
                 <li>Fonts: Playfair Display and Lato via <a href="https://fonts.google.com/">Google Fonts</a>.</li>
                 <li>CSS reset: <a href="https://necolas.github.io/normalize.css/">normalize.css</a>.</li>
             </ul>
