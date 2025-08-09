@@ -21,6 +21,14 @@
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+         img-src 'self' https: data:;
+         script-src 'self' https://cdn.jsdelivr.net https://cdn.emailjs.com 'unsafe-inline';
+         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+         font-src 'self' https://fonts.gstatic.com;
+         connect-src 'self' https://api.emailjs.com;
+         frame-ancestors 'none'">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +48,8 @@
 
     <header>
         <a href="index.html" class="logo">
-            <img src="images/logo_14.svg" alt="True Focus Photography logo" class="logo-img" width="32" height="32" loading="lazy" decoding="async">
+            <img src="images/logo_14.svg" alt="True Focus Photography logo" class="logo-img" width="32" height="32"
+                loading="lazy" decoding="async">
             <span>True Focus Photography</span>
         </a>
         <button class="mobile-menu" aria-label="Toggle Navigation" aria-expanded="false">
