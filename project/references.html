@@ -17,12 +17,21 @@
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <!-- Basic CSP for this site -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        img-src 'self' data: https:;
+        style-src 'self' 'unsafe-inline';
+        font-src 'self' https://fonts.gstatic.com;
+        script-src 'self' 'sha256-...';
+        connect-src 'self' https://api.emailjs.com;
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self'">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-        rel="stylesheet">
 
     <!-- CSS normalize -->
     <link rel="stylesheet" href="styles/normalize.css">

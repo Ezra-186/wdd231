@@ -28,6 +28,13 @@ body {
     line-height: 1.6;
     font-family: "Lato", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/...woff2) format('woff2');
+}
 
 main {
     flex: 1;
