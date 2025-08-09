@@ -20,6 +20,7 @@ function renderGallery(items, container) {
         <img
           src="${item.src}"
           alt="${item.title}"
+          fetchpriority="high"
           loading="lazy"
           decoding="async"
           width="400"
