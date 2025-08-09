@@ -21,25 +21,39 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Basic CSP for this site -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
-     img-src 'self' https: data:;
-     script-src 'self' https://cdn.jsdelivr.net https://cdn.emailjs.com 'unsafe-inline';
-     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-     font-src 'self' https://fonts.gstatic.com;
-     connect-src 'self' https://api.emailjs.com;
-     frame-ancestors 'none'">
-
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      img-src 'self' https: data:;
+      script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.emailjs.com;
+      style-src  'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src   https://fonts.gstatic.com;
+      connect-src 'self' https://api.emailjs.com;
+      worker-src 'self' blob:;
+      object-src 'none';
+      base-uri 'self';
+      frame-ancestors 'none';
+      upgrade-insecure-requests">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font"
+        href="https://fonts.gstatic.com/s/playfairdisplay/v39/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2"
+        type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2"
+        type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wXiWtFCc.woff2"
+        type="font/woff2" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
 
+
     <link rel="preload" as="image" href="images/pic_2.webp"
-        imagesrcset="images/Pic_2.webp 400w, images/pic_22x.webp 800w" imagesizes="(max-width: 600px) 100vw, 400px" fetchpriority="high">
-        
+        imagesrcset="images/pic_2.webp 400w, images/pic_22x.webp 800w" imagesizes="(max-width: 600px) 100vw, 400px"
+        fetchpriority="high">
+
+
     <!-- CSS normalize -->
     <link rel="stylesheet" href="styles/normalize.css">
     <!-- Main styles -->
@@ -53,18 +67,20 @@
 <body>
     <header>
         <a href="index.html" class="logo">
-            <img src="images/logo_14.svg" alt="True Focus Photography logo" class="logo-img" width="32" height="32" loading="lazy" decoding="async">
+            <img src="images/logo_14.svg" alt="True Focus Photography logo" class="logo-img" width="32" height="32"
+                loading="lazy" decoding="async">
             <span>True Focus Photography</span>
         </a>
-        <button class="mobile-menu" aria-label="Toggle Navigation" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+
+        <button id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
         </button>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
+        <nav id="site-nav" class="nav-links" hidden inert>
+            <a class="cta" href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
-            <a class="cta" href="contact.html">Get in Touch</a>
+            <a href="contact.html">Get in Touch</a>
         </nav>
     </header>
 
@@ -81,7 +97,7 @@
                     <img src="images/pic_2.webp" srcset="images/pic_2.webp 400w, images/pic_22x.webp 800w"
                         sizes="(max-width: 600px) 100vw, 400px"
                         alt="Self-portrait of photographer Daniel Ezra Rivera holding a camera, smiling against a blurred outdoor background."
-                        class="hero-image" fetchpriority="high" loading="eager" >
+                        class="hero-image" width="400" height="400" fetchpriority="high" loading="eager">
                 </div>
             </div>
         </section>
@@ -126,15 +142,15 @@
     <footer aria-label="Site footer">
         <p>&copy; 2025 | Created by Daniel Ezra Rivera</p>
         <div class="socials">
-            <a href="https://twitter.com" aria-label="Twitter" aria-hidden="true">
+            <a href="https://twitter.com" aria-label="Twitter">
                 <img src="images/logo.svg" alt="Twitter logo" class="social-icon" width="24" height="24" loading="lazy"
                     decoding="async">
             </a>
-            <a href="https://instagram.com" aria-label="Instagram" aria-hidden="true">
+            <a href="https://instagram.com" aria-label="Instagram">
                 <img src="images/instagram.svg" alt="Instagram logo" class="social-icon" width="24" height="24"
                     loading="lazy" decoding="async">
             </a>
-            <a href="https://facebook.com" aria-label="Facebook" aria-hidden="true">
+            <a href="https://facebook.com" aria-label="Facebook">
                 <img src="images/facebook_1.svg" alt="Facebook logo" class="social-icon" width="24" height="24"
                     loading="lazy" decoding="async">
             </a>
