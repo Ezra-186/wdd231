@@ -23,28 +23,20 @@
 
     <!-- Basic CSP for this site -->
     <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      img-src 'self' https: data:;
-      script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.emailjs.com;
-      style-src  'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src   https://fonts.gstatic.com;
-      connect-src 'self' https://api.emailjs.com;
-      worker-src 'self' blob:;
-      object-src 'none';
-      base-uri 'self';
-      frame-ancestors 'none';
-      upgrade-insecure-requests">
+        default-src 'self';
+        img-src 'self' https: data:;
+        script-src 'self' https://cdn.jsdelivr.net https://cdn.emailjs.com;
+        style-src  'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src   https://fonts.gstatic.com;
+        connect-src 'self' https://api.emailjs.com;
+        object-src 'none';
+        base-uri 'self';
+        upgrade-insecure-requests">
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="font"
-        href="https://fonts.gstatic.com/s/playfairdisplay/v39/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2"
-        type="font/woff2" crossorigin>
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2"
-        type="font/woff2" crossorigin>
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wXiWtFCc.woff2"
-        type="font/woff2" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
@@ -67,13 +59,13 @@
                 loading="lazy" decoding="async">
             <span>True Focus Photography</span>
         </a>
-    
+
         <button id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
             <span class="bar" aria-hidden="true"></span>
             <span class="bar" aria-hidden="true"></span>
             <span class="bar" aria-hidden="true"></span>
         </button>
-    
+
         <nav id="site-nav" class="nav-links" hidden inert>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
