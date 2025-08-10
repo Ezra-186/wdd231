@@ -403,6 +403,17 @@ header {
     margin-top: 1rem;
 }
 
+.gallery .grid {
+    min-height: 720px;
+}
+
+
+@media (min-width: 769px) {
+    .gallery .grid {
+        min-height: 900px;
+    }
+}
+
 /* gallery item */
 .thumb {
     position: relative;
@@ -734,6 +745,10 @@ footer {
     font-size: 0.85rem;
 }
 
+footer #last-updated {
+    min-height: 1rem;
+}
+
 .footer-link {
     color: var(--color-white);
     text-decoration: none;
@@ -777,7 +792,6 @@ footer {
     outline-offset: 4px;
 }
 
-/* single icon rule */
 .social-icon {
     width: 24px;
     height: 24px;
@@ -787,8 +801,22 @@ footer {
 }
 
 
+/* ===== REFERENCES ===== */
+.references-page main {
+    max-width: 700px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+}
 
-/* ===== ABOUT ===== */
+
+
+
+
+
+
+
+/* ===== ABOUT ===== page deletd as it there should only be 3pages */
 /* .about-container {
     max-width: 800px;
     margin: 3rem auto;
@@ -876,11 +904,3 @@ footer {
     font-size: 1rem;
     color: var(--color-charcoal);
 } */
-
-/* ===== REFERENCES ===== */
-.references-page main {
-    max-width: 700px;
-    margin: 2rem auto;
-    text-align: center;
-    padding: 0 1rem;
-}
