@@ -7,13 +7,13 @@ import { initValidation } from './validate-form.mjs';
 import { initEmailForm } from './email-form.mjs';
 import { initReviewPage } from './review-data.mjs';
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
   if (typeof setFooterDates === 'function') setFooterDates();
   if (typeof initNavToggle === 'function') initNavToggle();
 
   const grid = document.querySelector('.grid');
   if (grid) {
-    if (typeof initGallery === 'function') initGallery();
+    if (typeof initGallery === 'function') await initGallery();
     if (typeof initLightbox === 'function') initLightbox();
   }
 
@@ -27,32 +27,40 @@ window.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('review-data')) {
     if (typeof initReviewPage === 'function') initReviewPage();
   }
+
   const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const links = document.querySelectorAll('header nav a');
-
   links.forEach(a => {
     a.classList.remove('cta');
     a.removeAttribute('aria-current');
-
     const linkURL = new URL(a.getAttribute('href'), location.href);
     const linkPage = (linkURL.pathname.split('/').pop() || 'index.html').toLowerCase();
-
     if (linkPage === path) {
       a.classList.add('cta');
       a.setAttribute('aria-current', 'page');
     }
   });
 
-  document.getElementById('view-portfolio')?.addEventListener('click', () => {
-    location.href = 'gallery.html';
-  });
-  document.getElementById('book-session')?.addEventListener('click', () => {
-    location.href = 'contact.html';
-  });
+  document.getElementById('view-portfolio')?.addEventListener('click', () => { location.href = 'gallery.html'; });
+  document.getElementById('book-session')?.addEventListener('click', () => { location.href = 'contact.html'; });
 
   const f = document.querySelector('link[rel~="icon"]') || document.createElement('link');
   f.rel = 'icon';
   f.href = 'images/favicon.ico?v=3';
   document.head.appendChild(f);
-
 });
+
+
+//   document.getElementById('view-portfolio')?.addEventListener('click', () => {
+//     location.href = 'gallery.html';
+//   });
+//   document.getElementById('book-session')?.addEventListener('click', () => {
+//     location.href = 'contact.html';
+//   });
+
+//   const f = document.querySelector('link[rel~="icon"]') || document.createElement('link');
+//   f.rel = 'icon';
+//   f.href = 'images/favicon.ico?v=3';
+//   document.head.appendChild(f);
+
+// });

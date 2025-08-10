@@ -22,9 +22,17 @@ function renderGallery(items, container) {
         const img = document.createElement('img');
         img.src = item.src;
         img.alt = item.title || '';
-        img.width = item.w || 400; 
-        img.height = item.h || 300;
         img.decoding = 'async';
+
+        if (item.w && item.h) {
+            img.width = item.w;
+            img.height = item.h;
+        } else {
+            img.addEventListener('load', () => {
+                img.width = img.naturalWidth;
+                img.height = img.naturalHeight;
+            }, { once: true });
+        }
 
         if (item.srcset) {
             img.srcset = item.srcset;
