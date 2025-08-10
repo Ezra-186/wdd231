@@ -326,22 +326,10 @@ header {
     display: block;
 }
 
-.thumb-media,
-.card {
-    position: relative;
-}
 
 .thumb-media {
     aspect-ratio: 4 / 3;
     overflow: hidden;
-}
-
-.thumb-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* was contain */
-    display: block;
 }
 
 
@@ -448,9 +436,7 @@ header {
     transform: scale(1.05);
 }
 
-.thumb .title,
-.thumb .description,
-.thumb .category {
+.thumb :is(.title, .description, .category) {
     position: relative;
     z-index: 2;
     text-align: center;

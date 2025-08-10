@@ -14,9 +14,6 @@
         padding: 0;
     }
 
-    /* .about-container>h1 {
-        font-size: 2.75rem;
-    } */
 
     .references-page h1,
     .siteplan-page h1 {
@@ -27,7 +24,4 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .thumb-media img {
-        object-fit: cover;
-    }
 }
