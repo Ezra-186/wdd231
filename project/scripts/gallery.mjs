@@ -3,7 +3,7 @@ async function fetchGalleryData() {
         const res = await fetch('data/gallery.json');
         if (!res.ok) throw new Error(`Gallery load failed: ${res.status}`);
         return await res.json();
-    } catch (_) {
+    } catch {
         return [];
     }
 }
@@ -12,25 +12,60 @@ function renderGallery(items, container) {
     container.innerHTML = '';
     const frag = document.createDocumentFragment();
 
-    items.forEach(item => {
+    items.forEach((item, i) => {
         const thumb = document.createElement('div');
         thumb.className = 'thumb';
-        thumb.innerHTML = `
-      <div class="thumb-media">
-        <img
-          src="${item.src}"
-          alt="${item.title}"
-          fetchpriority="high"
-          loading="lazy"
-          decoding="async"
-          width="400"
-          height="300"
-          sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 90vw">
-      </div>
-      <p class="title">${item.title}</p>
-      <p class="description">${item.description}</p>
-      <p class="category">${item.category}</p>
-    `;
+
+        const media = document.createElement('div');
+        media.className = 'thumb-media';
+
+        const img = document.createElement('img');
+        img.src = item.src;
+        img.alt = item.title || '';
+        img.width = item.w || 400; 
+        img.height = item.h || 300;
+        img.decoding = 'async';
+
+        if (item.srcset) {
+            img.srcset = item.srcset;
+            img.sizes = item.sizes || '(min-width:1024px) 25vw, (min-width:768px) 33vw, 90vw';
+        }
+
+        if (i === 0) {
+            img.loading = 'eager';
+            img.fetchPriority = 'high';
+            const href = img.currentSrc || img.src;
+            if (!document.querySelector(`link[rel="preload"][as="image"][href="${href}"]`)) {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = href;
+                link.fetchPriority = 'high';
+                document.head.appendChild(link);
+            }
+        } else {
+            img.loading = 'lazy';
+        }
+
+        media.appendChild(img);
+
+        const title = document.createElement('p');
+        title.className = 'title';
+        title.textContent = item.title || '';
+
+        const desc = document.createElement('p');
+        desc.className = 'description';
+        desc.textContent = item.description || '';
+
+        const cat = document.createElement('p');
+        cat.className = 'category';
+        cat.textContent = item.category || '';
+
+        thumb.appendChild(media);
+        thumb.appendChild(title);
+        thumb.appendChild(desc);
+        thumb.appendChild(cat);
+
         frag.appendChild(thumb);
     });
 
