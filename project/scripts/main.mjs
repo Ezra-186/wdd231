@@ -1,11 +1,11 @@
-import { setFooterDates } from './footerDates.mjs';
-import { initNavToggle } from './navToggle.mjs';
+import { setFooterDates } from './footer-dates.mjs';
+import { initNavToggle } from './nav-toggle.mjs';
 import { initGallery } from './gallery.mjs';
 import { initLightbox } from './lightbox.mjs';
 import { initFormStorage } from './storage.mjs';
-import { initValidation } from './validateForm.mjs';
-import { initEmailForm } from './emailForm.mjs';
-import { initReviewPage } from './reviewData.mjs';
+import { initValidation } from './validate-form.mjs';
+import { initEmailForm } from './email-form.mjs';
+import { initReviewPage } from './review-data.mjs';
 
 window.addEventListener('DOMContentLoaded', () => {
   if (typeof setFooterDates === 'function') setFooterDates();

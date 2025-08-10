@@ -1,4 +1,4 @@
-import { UNSPLASH_API_URL, UNSPLASH_CLIENT_ID } from './config.mjs';
+import { UNSPLASH_API_URL, UNSPLASH_CLIENT_ID } from '../project/scripts/config.mjs';
 
 export async function fetchPhotos(keyword) {
     const url = `${UNSPLASH_API_URL}?query=${encodeURIComponent(keyword)}&per_page=10&client_id=${UNSPLASH_CLIENT_ID}`;
