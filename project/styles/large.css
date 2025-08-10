@@ -23,6 +23,10 @@
         font-size: 2.25rem;
     }
 
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .thumb-media img {
         object-fit: cover;
     }

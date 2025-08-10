@@ -20,17 +20,15 @@
 
     <!-- Basic CSP for this site -->
     <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      img-src 'self' https: data:;
-      script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.emailjs.com;
-      style-src  'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src   https://fonts.gstatic.com;
-      connect-src 'self' https://api.emailjs.com;
-      worker-src 'self' blob:;
-      object-src 'none';
-      base-uri 'self';
-      frame-ancestors 'none';
-      upgrade-insecure-requests">
+    default-src 'self';
+    img-src 'self' https: data:;
+    script-src 'self' https://cdn.jsdelivr.net https://cdn.emailjs.com;
+    style-src  'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src   https://fonts.gstatic.com;
+    connect-src 'self' https://api.emailjs.com;
+    object-src 'none';
+    base-uri 'self';
+    upgrade-insecure-requests">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
