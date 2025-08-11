@@ -7,14 +7,21 @@
     <meta name="description" content="Site plan for final project">
     <meta name="author" content="Ezra Daniel Rivera">
     <title>Site Plan - True Focus Photography</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- CSS normalize -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Main styles -->
+    <link rel="preload" href="styles/small.css" as="style">
+    <link rel="preload" href="styles/large.css" as="style">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 769px)">
+    <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>Site Plan: True Focus Photography</h1>
 
-    <main>
+    <main >
         <section class="section">
             <h2>Site Name</h2>
             <p><strong>True Focus Photography</strong> — captures sincere, emotionally focused moments in weddings,
@@ -23,15 +30,14 @@
 
         <section class="section">
             <h2>Site Purpose</h2>
-            <p>This site will showcase the photographer’s portfolio and enable visitors to
-                search inspirational images via the Unsplash API and to book sessions through
-                a transactional form powered by EmailJS.</p>
+            <p>This site will showcase the photographer’s portfolio and to book sessions through
+                a transactional form powered by EmailJS API.</p>
         </section>
 
         <section class="section">
             <h2>Scenarios</h2>
             <ul>
-                <li>How can I find example photos for a specific theme or style?</li>
+                <li>How can I find example photos for a specific theme?</li>
                 <li>How do I book a wedding or portrait session online?</li>
                 <li>What areas and venues does the photographer serve?</li>
             </ul>
@@ -43,14 +49,14 @@
                 <li><strong>Folder Structure:</strong>
                     <ul>
                         <li><code>/styles</code>: normalize.css, main.css, gallery.css</li>
-                        <li><code>/scripts</code>: config.mjs, fetchPhotos.mjs, renderPhotos.mjs, emailForm.mjs,
-                            footerDates.mjs, main.mjs</li>
+                        <li><code>/scripts</code>: config.mjs, gallery.mjs, email-form.mjs,
+                            footer-dates.mjs, main.mjs</li>
                         <li><code>/images</code>: logo.png, hero-placeholder.jpg, wireframes</li>
                     </ul>
                 </li>
                 <li><strong>Global CSS:</strong> Sticky-footer pattern (body flex container, main flex:1)</li>
                 <li><strong>ES Modules:</strong> All scripts use <code>type="module"</code> and deferred loading</li>
-                <li><strong>API Integration:</strong> Unsplash for image search, EmailJS for booking form</li>
+                <li><strong>API Integration:</strong> EmailJS for booking form</li>
             </ul>
         </section>
 
