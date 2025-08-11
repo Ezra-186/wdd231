@@ -7,6 +7,7 @@
     --color-white: #FFFFFF;
 }
 
+
 /* reset */
 * {
     margin: 0;
@@ -16,6 +17,7 @@
 
 html,
 body {
+    margin: 0;
     height: 100%;
 }
 
@@ -29,6 +31,64 @@ body {
     font-family: "Lato", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
+header {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 1200px;
+    background: var(--color-burgundy);
+    border-radius: 2rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+
+main {
+    flex: 1;
+    padding-top: 5rem;
+}
+
+.hero {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 24px solid rgba(241, 241, 239, 0.6);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+h1 {
+    color: #4A0D29;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-align: center
+}
+
+
 @font-face {
     font-family: 'Playfair Display';
     font-style: normal;
@@ -37,31 +97,19 @@ body {
     src: url(https://fonts.gstatic.com/...woff2) format('woff2');
 }
 
-main {
-    flex: 1;
-    padding-top: 5rem;
-}
-
 /* headings */
-h1,
 h2 {
     color: var(--color-burgundy);
     text-align: center;
     margin-bottom: 1rem;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-}
-
-h1 {
-    font-size: clamp(2rem, 5vw, 2.6rem);
-    line-height: 1.2;
 }
 
 h2 {
@@ -113,24 +161,10 @@ aside h1 {
     text-align: center;
 }
 
-/* ===== HEADER & NAVIGATION ===== */
-header {
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 2rem);
-    max-width: 1200px;
-    background: var(--color-burgundy);
-    border-radius: 2rem;
-    padding: 0.75rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
 
-.logo {
+/* ===== HEADER & NAVIGATION ===== */
+
+/* .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -138,7 +172,7 @@ header {
     font-size: 1.2rem;
     color: var(--color-white);
     text-decoration: none;
-}
+} */
 
 .logo-img {
     height: 2rem;
@@ -275,16 +309,16 @@ header {
 }
 
 /* ===== HERO ===== */
-.hero {
+/* .hero {
     padding: 2rem 1rem;
     text-align: center;
-}
+} */
 
 .hero h1 {
     font-size: clamp(2.5rem, 5vw, 3rem);
 }
 
-.hero-image {
+/* .hero-image {
     width: 100%;
     max-width: 400px;
     aspect-ratio: 1 / 1;
@@ -293,7 +327,7 @@ header {
     border-radius: 50%;
     margin: 0 auto 1rem;
     display: block;
-}
+} */
 
 /* ===== CARDS / HIGHLIGHTS ===== */
 .highlights {
