@@ -22,8 +22,10 @@ html {
    * Remove the margin in all browsers.
    */
 
+html,
 body {
     margin: 0;
+    height: 100%;
 }
 
 /**
@@ -34,15 +36,73 @@ main {
     display: block;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #4A0D29;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-align: center
+}
+
+section h1,
+article h1,
+nav h1,
+aside h1 {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+}
+
+h2 {
+    color: var(--color-burgundy);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+
+h5 {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+
 /**
    * Correct the font size and margin on `h1` elements within `section` and
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
 
 /* Grouping content
      ========================================================================== */
